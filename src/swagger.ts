@@ -4,14 +4,14 @@ import { Express } from 'express';
 
 const options = {
   definition: {
-    openapi: '3.0.0',
+    openapi: '3.0.0', 
     info: {
-      title: 'API Documentation',
+      title: 'Aplicação contendo documentação do backend do BiblioPE', 
       version: '1.0.0',
-      description: 'API documentation for the Node.js application with TypeScript and Sequelize',
+      description: 'Documentação da API para uma aplicação Node.js com TypeScript e Sequelize.', 
     },
   },
-  apis: ['./src/routes/*.ts'], // Caminho para os arquivos com as anotações do Swagger
+  apis: ['./src/routes/*.ts'], 
 };
 
 const swaggerSpec = swaggerJsdoc(options);
