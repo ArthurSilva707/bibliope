@@ -22,8 +22,8 @@ Este é um sistema de gerenciamento de biblioteca para cadastrar, consultar, atu
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/ArthurSilva707/bibliope
+cd bibliope
 ```
 
 2. Instale as dependências:
@@ -80,13 +80,9 @@ src/
 │   └── index.ts
 │
 ├── config/
+│   ├── seeders/
+│   │   └── seed.ts
 │   └── database.ts
-│
-├── migrations/
-│   └── criar_migracoes_necessarias.ts
-│
-├── seeders/
-│   └── criar_seeders_necessarios.ts
 │
 └── app.ts
 └── server.ts
@@ -96,14 +92,20 @@ src/
 
 ### Livros
 
-- `GET /books`: Listar todos os livros ou buscar por título/autor/ISBN.
-- `POST /books`: Cadastrar um novo livro.
-- `PUT /books/:id`: Atualizar informações de um livro.
-- `DELETE /books/:id`: Excluir um livro (se não houver empréstimos ativos).
+- `GET /api/books`: Listar todos os livros ou buscar por título/autor/ISBN.
+- `POST /api/books`: Cadastrar um novo livro.
+- `PUT /api/books/:id`: Atualizar informações de um livro.
+- `DELETE /api/books/:id`: Excluir um livro (se não houver empréstimos ativos).
 
 ### Empréstimos
 
-- `POST /loans`: Registrar um novo empréstimo de livro.
-- `PUT /loans/:id/return`: Registrar a devolução de um livro.
-- `GET /loans`: Obter todos os empréstimos com informações de usuários e livros correspondentes.
+- `POST /api/apiloans`: Registrar um novo empréstimo de livro.
+- `PUT /api/loans/:id/return`: Registrar a devolução de um livro.
+- `GET /api/loans`: Obter todos os empréstimos com informações de usuários e livros correspondentes.
+
+### Usuários
+
+- `POST /api/users`: Registrar um novo usuário.
+- `PUT /api/users/:id/return`: Atualizar um usuário basedo no seu identificador.
+- `GET /api/users`: Obter todos os usuários cadastrados na base de dados.
 
